@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="../static/navbar.css">
+    <link rel="stylesheet" href="../static/responsive.css">
+    <link rel="stylesheet" href="../static/email.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <title>Email Spam Detection</title>
+</head>
+<body>
+    <nav class="navbar">
+
+    <div class="logo">
+
+    <!--<button id="menuBtn" class="menu-btn">
+        <i class="fa-solid fa-bars"></i>
+    </button>-->
+
+    <button id="menuBtn" class="menu-btn">
+    <i class="fa-solid fa-bars"></i>
+    </button>
+    <h2>DeepVision <span>AI</span></h2>
+
+</div>
+
+    <ul class="nav-links">
+
+        <li><a href="/">Features</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contact</a></li>
+
+    </ul>
+
+    <a href="/">
+    <button class="dashboard-btn">
+        Open Dashboard
+    </button>
+</a>
+
+</nav>
+
+<div class="container">
+
+    <aside class="sidebar">
+
+        <a href="/" class="menu-link">
+        <div class="menu active">
+            <i class="fa-solid fa-table-cells-large"></i>
+            <span>Overview</span>
+        </div>
+    </a>
+        <a href = "/chat" class = "menu-link">
+        <div class="menu">
+            <i class="fa-regular fa-comments"></i>
+            <span>AI Chatbot</span>
+        </div>
+    </a>
+
+        <a href = "/password_strength" class = "menu-link">
+            <div class="menu">
+            <i class="fa-solid fa-key"></i>
+            <span>Password Analyzer</span>
+            </div>
+        </a>
+
+        <a href="/email" class="menu-link">
+            <div class="menu">
+            <i class="fa-regular fa-envelope"></i>
+            <span>Email Detector</span>
+        </div>
+        </a>
+
+        <a href="/url" class="menu-link">
+        <div class="menu">
+            <i class="fa-solid fa-link"></i>
+            <span>URL Analyzer</span>
+        </div>
+        </a>
+
+        <a href="/news" class="menu-link">
+        <div class="menu">
+            <i class="fa-solid fa-shield-halved"></i>
+            <span>Cyber News</span>
+        </div>
+        </a>
+
+        
+
+        <div class="note">
+
+            <p>
+                All analysis runs through AI models.
+                Verify critical decisions with a security professional.
+            </p>
+
+        </div>
+
+    </aside>
+
+    <main class="main-content">
+
+    <div class="page-header">
+        <h1>Email Threat Detection</h1>
+        <p>Analyze suspicious emails using AI to detect spam, phishing and malicious content.</p>
+    </div>
+
+    <div class="email-layout">
+
+        <!-- LEFT PANEL -->
+        <div class="email-card">
+
+            <h2><i class="fa-regular fa-envelope"></i> Email Content</h2>
+
+            <form method="POST">
+
+                <textarea
+                    name="email"
+                    rows="15"
+                    placeholder="Paste your email content here..."
+                    required>{{ email }}</textarea>
+
+                <div class="btn-group">
+
+                    <button type="submit" class="analyze-btn">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        Analyze Email
+                    </button>
+
+                    <button type="button" class="clear-btn" onclick="clearForm()">
+                        <i class="fa-solid fa-trash"></i>
+                        Clear
+                    </button>
+
+                </div>
+
+            </form>
+
+        </div>
+
+        <!-- RIGHT PANEL -->
+        <div class="result-card">
+
+    <h2>
+        <i class="fa-solid fa-shield-halved"></i>
+        Analysis Result
+    </h2>
+
+
+    <div class="result-grid">
+
+        <div class="result-box">
+            <span>Prediction</span>
+            <h3>{{ prediction }}</h3>
+        </div>
+
+        <div class="result-box">
+            <span>Confidence</span>
+            <h3>{{ confidence }}%</h3>
+        </div>
+
+        <div class="result-box">
+            <span>Risk Level</span>
+            <h3>{{ risk }}</h3>
+        </div>
+
+    </div>
+
+    
+
+</div>
+
+    </div>
+
+</main>
+
+</div>
+
+<script>
+
+console.log("Script Loaded");
+
+const menuBtn = document.getElementById("menuBtn");
+const sidebar = document.querySelector(".sidebar");
+
+console.log(menuBtn);
+console.log(sidebar);
+
+menuBtn.addEventListener("click", function(){
+
+    console.log("Button Clicked");
+
+    sidebar.classList.toggle("show");
+
+});
+
+document.addEventListener("click", function(e){
+
+    if(
+        !sidebar.contains(e.target) &&
+        !menuBtn.contains(e.target)
+    ){
+        sidebar.classList.remove("show");
+    }
+
+
+});
+
+function clearForm() {
+
+    document.querySelector("textarea").value = "";
+
+    document.querySelector(".result-box h3").innerText = "No Prediction Yet";
+
+}
+</script>
+</body>
+</html>

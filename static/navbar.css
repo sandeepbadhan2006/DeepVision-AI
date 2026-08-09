@@ -1,0 +1,217 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:"Segoe UI",sans-serif;
+}
+
+body{
+
+    background:#090E1A;
+
+}
+
+/* ================= NAVBAR ================= */
+
+.navbar{
+    position:fixed;
+    top:0;
+    left:0;
+    right:0;
+    width:100%;
+    height:65px;
+
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+
+    padding:0 50px;
+
+    background:#0B1220;
+    border-bottom:1px solid #1A314A;
+
+    z-index:1000;
+}
+
+
+/* Logo */
+
+.logo{
+
+    display:flex;
+    align-items:center;
+    gap:8px;
+
+}
+
+.logo h2{
+    color:#fff;
+    font-size:24px;
+    font-weight:700;      /* bold */
+    letter-spacing:.3px;
+    
+}
+
+.logo span{
+    color:#37D7FF;
+    font-weight:700;
+}
+
+/* Menu */
+
+.nav-right{
+    display:flex;
+    align-items:center;
+    gap:35px;
+}
+
+.nav-links{
+    list-style:none;
+    display:flex;
+    gap:28px;
+}
+
+.nav-links a{
+
+    text-decoration:none;
+
+    color:#A8B3C7;
+
+    font-size:17px;
+
+    transition:.3s;
+
+}
+
+.nav-links a:hover{
+
+    color:#37D7FF;
+
+}
+
+/* Button */
+
+.dashboard-btn{
+
+    background:#37D7FF;
+
+    color:#08111B;
+
+    border:none;
+
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:.3s;
+    padding:12px 24px;
+
+    border-radius:8px;
+
+    font-size:15px;
+
+}
+
+.dashboard-btn:hover{
+
+    background:#58E2FF;
+
+}
+
+.container{
+    display:flex;
+    width:100%;
+    min-height:100vh;
+}
+
+.sidebar{
+
+    position: fixed;
+
+    top:65px;
+
+    left:0;
+
+    width:280px;
+
+    height:calc(100vh - 65px);
+
+    background:#0B1220;
+
+    border-right:1px solid #1A314A;
+
+    padding:18px;
+
+    overflow-y:auto;
+
+    z-index:999;
+
+}
+
+.menu{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+    color:#9aa6b2;
+
+    padding:12px;
+
+    margin-bottom:8px;
+
+    border-radius:8px;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+.menu-btn{
+    display:none;
+}
+.menu:hover{
+
+    background:#13223b;
+
+    color:#35d7ff;
+
+}
+.menu-link{
+    text-decoration: none;
+    color: inherit;
+}
+.active{
+
+    background:#12344d;
+
+    color:#35d7ff;
+
+    border:1px solid #35d7ff33;
+    
+
+}
+
+.note{
+
+    position:absolute;
+
+    bottom:20px;
+
+    width:200px;
+
+    border:1px solid #27435e;
+
+    padding:12px;
+
+    border-radius:8px;
+
+    color:#8f9fb3;
+
+    font-size:12px;
+
+}

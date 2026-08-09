@@ -1,0 +1,254 @@
+/* ===========================
+   TABLET
+=========================== */
+
+@media (max-width:1024px){
+
+    .navbar{
+        padding:0 30px;
+    }
+
+    .sidebar{
+        width:200px;
+    }
+
+    .main{
+        padding:35px;
+    }
+
+    .main h1{
+        font-size:48px;
+    }
+
+    .card-container{
+        grid-template-columns:repeat(2,1fr);
+        gap:20px;
+    }
+
+    .card{
+        width:100%;
+        height:auto;
+    }
+
+}
+
+
+/* ===========================
+   MOBILE
+=========================== */
+
+@media (max-width:768px){
+
+    /* Navbar */
+
+    .navbar{
+
+        height:65px;
+
+        padding:0 20px;
+
+        display:flex;
+
+        justify-content:space-between;
+
+        align-items:center;
+
+    }
+
+    .logo{
+
+        display:flex;
+
+        align-items:center;
+
+        gap:12px;
+
+    }
+
+    .logo h2{
+
+        font-size:18px;
+
+    }
+
+    /* Hamburger */
+
+    .menu-btn{
+
+        display:block;
+
+        background:none;
+
+        border:none;
+
+        color:white;
+
+        font-size:24px;
+
+        cursor:pointer;
+
+    }
+
+    /* Hide desktop navbar */
+
+    .nav-links{
+
+        gap: 6px;
+
+    }
+    .nav-links a{
+        font-size: 12px;
+        
+    }
+
+    .dashboard-btn{
+
+        display:none;
+
+    }
+
+    /* Sidebar */
+
+   .sidebar{
+
+    position:fixed;
+
+    top:65px;
+
+    left:-240px;
+
+    width:220px;
+
+    height:calc(100vh - 65px);
+
+    background:#0B1220;
+
+    overflow-y:auto;
+
+    transition:left .3s ease;
+
+    z-index:9999;
+}
+
+.sidebar.show{
+
+    left:0 !important;
+
+}
+
+    .note{
+
+        width:180px;
+
+        font-size:11px;
+
+    }
+
+    /* Main */
+
+    .main{
+
+        width:100%;
+
+        padding:25px;
+
+    }
+
+    .main h1{
+
+        font-size:42px;
+
+    }
+
+    .sub{
+
+        font-size:16px;
+
+        line-height:1.5;
+
+    }
+
+    /* Cards */
+
+    .card-container{
+
+        grid-template-columns:1fr;
+
+        gap:20px;
+
+    }
+
+    .card{
+
+        width:100%;
+
+        height:auto;
+
+        padding:22px;
+
+    }
+
+}
+
+
+/* ===========================
+   SMALL MOBILE
+=========================== */
+
+@media (max-width:480px){
+
+    .navbar{
+
+        padding:0 15px;
+
+    }
+
+    .logo h2{
+
+        font-size:16px;
+
+    }
+
+    .menu-btn{
+
+        font-size:22px;
+
+    }
+
+    .main{
+
+        padding:20px;
+
+    }
+
+    .main h1{
+
+        font-size:34px;
+
+    }
+
+    .sub{
+
+        font-size:14px;
+
+    }
+
+    .card{
+
+        padding:18px;
+
+    }
+
+    .card h3{
+
+        font-size:18px;
+
+    }
+
+    .card p{
+
+        font-size:14px;
+
+    }
+
+}

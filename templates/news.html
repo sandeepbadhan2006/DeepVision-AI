@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="../static/navbar.css">
+    <link rel="stylesheet" href="../static/responsive.css">
+    <link rel="stylesheet" href="../static/news.css">
+
+
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <title>AI Chatbot</title>
+</head>
+<body>
+
+<!-- ================= NAVBAR ================= -->
+
+<nav class="navbar">
+
+    <div class="logo">
+
+        <button id="menuBtn" class="menu-btn">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+
+        <h2>DeepVision <span>AI</span></h2>
+
+    </div>
+
+    <ul class="nav-links">
+        <li><a href="/">Features</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contact</a></li>
+    </ul>
+
+    <a href="/">
+    <button class="dashboard-btn">
+        Open Dashboard
+    </button>
+</a>
+
+</nav>
+
+<!-- ================= MAIN ================= -->
+
+<div class="container">
+
+    <!-- Sidebar -->
+
+    <aside class="sidebar">
+
+        <a href="/" class="menu-link">
+            <div class="menu">
+                <i class="fa-solid fa-table-cells-large"></i>
+                <span>Overview</span>
+            </div>
+        </a>
+
+        <a href="/chat" class="menu-link">
+            <div class="menu active">
+                <i class="fa-regular fa-comments"></i>
+                <span>AI Chatbot</span>
+            </div>
+        </a>
+
+        <a href="/password_strength" class="menu-link">
+            <div class="menu">
+                <i class="fa-solid fa-key"></i>
+                <span>Password Analyzer</span>
+            </div>
+        </a>
+
+        <a href="/email" class="menu-link">
+            <div class="menu">
+                <i class="fa-regular fa-envelope"></i>
+                <span>Email Detector</span>
+            </div>
+        </a>
+
+        <a href="/url" class="menu-link">
+        <div class="menu">
+            <i class="fa-solid fa-link"></i>
+            <span>URL Analyzer</span>
+        </div>
+        </a>
+
+        <a href="/news" class="menu-link">
+        <div class="menu">
+            <i class="fa-solid fa-shield-halved"></i>
+            <span>Cyber News</span>
+        </div>
+        </a>
+
+        
+        <div class="note">
+            <p>
+                All analysis runs through AI models.
+                Verify critical decisions with a security professional.
+            </p>
+        </div>
+
+    </aside>
+
+    <!-- ================= MAIN CONTENT ================= -->
+
+<main class="main">
+    <div class="news-container">
+
+    <div class="news-header">
+
+        <h1>Cyber Threat News</h1>
+
+        <p>
+            Stay updated with the latest cybersecurity threats,
+            ransomware attacks, phishing campaigns and vulnerabilities.
+        </p>
+
+    </div>
+
+    <div class="search-box">
+
+        <input
+            type="text"
+            id="searchInput"
+            placeholder="Search cyber news...">
+
+    </div>
+
+    <div class="news-grid">
+
+        {% for item in news %}
+
+        <div class="news-card">
+
+            <span class="badge">Latest</span>
+
+            <h2>{{ item.title }}</h2>
+
+            <p class="date">
+                <i class="fa-regular fa-calendar"></i>
+                {{ item.date }}
+            </p>
+
+            <a
+                href="{{ item.link }}"
+                target="_blank"
+                class="read-btn">
+
+                Read More
+                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+
+            </a>
+
+        </div>
+
+        {% endfor %}
+
+    </div>
+</div>
+</main>
+
+
+
+<script>
+
+const searchInput = document.getElementById("searchInput");
+
+searchInput.addEventListener("keyup", function(){
+
+    const value = this.value.toLowerCase();
+
+    const cards = document.querySelectorAll(".news-card");
+
+    cards.forEach(card=>{
+
+        const title = card.querySelector("h2").innerText.toLowerCase();
+
+        if(title.includes(value))
+            card.style.display="block";
+        else
+            card.style.display="none";
+
+    });
+
+});
+
+</script>
+
+</body>
+</html>
+
+</body>
+</html>

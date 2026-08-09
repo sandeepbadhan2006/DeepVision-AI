@@ -1,0 +1,249 @@
+/* ===========================
+   MAIN CONTENT
+=========================== */
+.main-content{
+
+    margin-left:280px;
+    margin-top:65px;
+    width:calc(100% - 280px);
+    min-height:calc(100vh - 65px);
+
+    padding:40px;
+
+    background:
+        linear-gradient(rgba(255,255,255,.04) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,.04) 1px, transparent 1px),
+        #090E1A;
+
+    background-size:48px 48px;
+}
+.page-header{
+    margin-bottom:25px;
+}
+
+.page-header h1{
+    font-size:32px;
+    margin-bottom:8px;
+    color:#ffffff;
+}
+
+.page-header p{
+    color:#A8B3C7;
+    font-size:16px;
+}
+
+/* ===========================
+   LEFT + RIGHT LAYOUT
+=========================== */
+
+.email-layout{
+
+    display:grid;
+
+    grid-template-columns:2fr 1fr;
+
+    gap:30px;
+
+    align-items:start;
+
+    width:100%;
+
+}
+
+/* ===========================
+   EMAIL CARD
+=========================== */
+
+.email-card{
+
+    width:100%;
+
+    background:#fff;
+
+    border-radius:15px;
+
+    padding:25px;
+
+    box-shadow:0 5px 15px rgba(0,0,0,.08);
+
+}
+
+.email-card h2{
+    margin-bottom:20px;
+    color:#1e293b;
+}
+
+.email-card textarea{
+    width:100%;
+    height:340px;
+    padding:18px;
+    border:1px solid #d1d5db;
+    border-radius:12px;
+    resize:none;
+    font-size:15px;
+    outline:none;
+    transition:.3s;
+}
+
+.email-card textarea:focus{
+    border-color:#2563eb;
+    box-shadow:0 0 8px rgba(37,99,235,.25);
+}
+
+/* ===========================
+   BUTTONS
+=========================== */
+
+.btn-group{
+    display:flex;
+    gap:15px;
+    margin-top:20px;
+}
+
+.btn-group button{
+    padding:12px 22px;
+    border:none;
+    border-radius:10px;
+    cursor:pointer;
+    font-size:15px;
+}
+
+.analyze-btn{
+    background:linear-gradient(135deg,#2563EB,#37D7FF);
+    color:#fff;
+    border:none;
+    transition:.3s;
+}
+
+.analyze-btn:hover{
+    transform:translateY(-2px);
+    box-shadow:0 8px 20px rgba(55,215,255,.35);
+}
+
+.clear-btn{
+    background:#e5e7eb;
+}
+
+.clear-btn:hover{
+    background:#d1d5db;
+}
+
+/* ===========================
+   RESULT CARD
+=========================== */
+
+.result-card{
+    background:#fff;
+    border-radius:18px;
+    padding:28px;
+    box-shadow:0 8px 25px rgba(0,0,0,.08);
+}
+.result-card h2{
+    margin-bottom:20px;
+}
+
+/* ===========================
+   RESULT BOXES
+=========================== */
+
+.result-grid{
+    display:flex;
+    flex-direction:column;
+    gap:15px;
+}
+
+.result-box{
+    background:#F7FAFC;
+    border-left:4px solid #37D7FF;
+    border-radius:10px;
+    padding:15px;
+}
+
+.result-box span{
+    color:#64748b;
+    font-size:14px;
+}
+
+.result-box h3{
+    margin-top:8px;
+    color:#0f172a;
+}
+
+/* ===========================
+   EMPTY RESULT
+=========================== */
+
+.empty-result{
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    height:320px;
+    color:#64748b;
+}
+
+.empty-result i{
+    font-size:60px;
+    color:#2563eb;
+    margin-bottom:20px;
+}
+
+
+/* ===========================
+   RECOMMENDATION
+=========================== */
+
+.recommendation{
+    margin-top:25px;
+}
+
+.recommendation h3{
+    margin-bottom:12px;
+}
+
+.recommendation ul{
+    padding-left:18px;
+}
+
+.recommendation li{
+    margin:10px 0;
+    color:#475569;
+}
+
+.email-card,
+.result-card{
+
+    background:white;
+
+    border-radius:18px;
+
+    border-top:3px solid #37D7FF;
+
+    box-shadow:
+        0 10px 25px rgba(0,0,0,.15);
+
+}
+
+
+.email-card textarea:focus{
+    border-color:#37D7FF;
+    box-shadow:0 0 12px rgba(55,215,255,.25);
+}
+
+/* ===========================
+   RESPONSIVE
+=========================== */
+
+@media(max-width:992px){
+
+    .email-layout{
+        flex-direction:column;
+    }
+
+    .email-card,
+    .result-card{
+        width:100%;
+    }
+
+}

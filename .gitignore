@@ -1,0 +1,13 @@
+.env/
+.venv/
+venv/
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+.vscode/
+
+# Large datasets and trained models
+artifacts/email/*.csv
+artifacts/email/*.pkl
+archive/*.csv
+notebook/*.csv
