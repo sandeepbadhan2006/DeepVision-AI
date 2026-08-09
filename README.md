@@ -13,7 +13,7 @@ The platform combines **Machine Learning, Natural Language Processing, AI, and W
 DeepVision AI was **inspired and developed by Sandeep Badhan**, with the goal of creating a practical cybersecurity platform that combines AI with real-world security awareness.
 
 ---
-## 📸 Screenshots
+
 ## 🚀 Features
 
 ### 📧 Email Spam & Phishing Detection
@@ -36,6 +36,8 @@ Ask cybersecurity-related questions and get AI-powered responses.
 
 Stay updated with cybersecurity-related news and information.
 
+---
+## 📸 Screenshots
 ---
 
 ## 🛠️ Technologies Used
