@@ -38,6 +38,32 @@ Stay updated with cybersecurity-related news and information.
 
 ---
 ## 📸 Screenshots
+
+### 🏠 Dashboard
+
+![DeepVision AI Dashboard](screenshot/overview.png)
+
+### 📧 Email Spam & Phishing Detection
+
+![Email Detection](screenshot/email.png)
+
+### 🔐 Password Strength Analyzer
+
+![Password Analyzer](screenshot/password.png)
+
+### 🔗 URL Security Analyzer
+
+![URL Analyzer](screenshot/url.png)
+
+### 🤖 AI Cybersecurity Assistant
+
+![AI Chatbot](screenshot/chatbot.png)
+
+### 📰 Cybersecurity News
+
+![Cybersecurity News](screenshot/news.png)
+
+
 ---
 
 ## 🛠️ Technologies Used
